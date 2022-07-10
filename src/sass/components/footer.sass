@@ -1,22 +1,38 @@
 
 .footer
     padding: 50rem 0
-    justify-content: space-between
+    justify-content: center
     align-items: center
+    flex-wrap: wrap
+    flex-direction: column
+    +media(1050)
+        flex-direction: row
+        justify-content: space-between
     a
         color: #37374a
     
 .foot-menu
     .flex
         align-items: center
+        flex-wrap: wrap
+        justify-content: space-between
+        flex-direction: column
+        +media(405)
+            flex-direction: row
     li
+        margin: 20rem 0
+        text-align: center
         a
             padding: 0 25rem
             color: #37374a
             &:hover
                 color: #756edc
     .btn
-        padding-left: 25rem
+        width: 100%
+        text-align: center
+        +media(1050)
+            width: auto
+
 .copyrayt 
     padding: 30rem 0
     width: 100%
@@ -34,3 +50,5 @@
             &:hover
                 transform: scale(1.3)
                 fill: $btnColor
+    p
+        padding-right: 10rem

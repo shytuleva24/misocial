@@ -28,13 +28,15 @@
         font-size: 16rem
         line-height: 28rem
 .price-cup 
-    margin: 25rem 
+    margin: 25rem 0 
     padding: 60rem 0
     width: 440rem
     border-radius: 30px
     background-color: $mainColor
     border: 1px solid #d7dbe8
     transition: all .5s linear
+    +media(500)
+            margin: 25rem 
     &:hover
         border-color: $mainColor
         filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
