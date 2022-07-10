@@ -1,0 +1,48 @@
+$mainColor: #fff
+$btnColor: #6e45e2
+$bgcColor: #f9fafc
+$titleColor: #4f4f6f
+$secondaryColor: #9fa4af
+$shadowbtn: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
+
+=media ($size)
+    @media screen and (min-width: #{$size}px)
+        @content
+
+=btn ($color)
+    display: inline-block
+    text-transform: uppercase
+    font-size: 12rem
+    padding: 17rem 39rem
+    border-radius: 25rem
+    transition: all .3s linear
+    @if $color == "white"
+        margin-bottom: 25rem
+        background-color: transparent
+        color: $mainColor
+        border: 1px solid $mainColor
+        +media(1055)
+            margin-left: 30rem
+            margin-bottom: 0
+        &:hover
+            background-color: $btnColor
+            border-color: $btnColor
+    @else if $color == "violet"
+        color: #c2c9db
+        background-color: $mainColor
+        border: 1px solid #d7dbe8
+        filter: $shadowbtn
+        &:hover
+            background-color: $btnColor
+            border-color: $btnColor
+            color: $mainColor
+            filter: none
+    @else if $color == "gray"
+        color: $mainColor
+        background-color: $btnColor
+        border: 1px solid $btnColor
+        &:hover
+            background-color: $mainColor
+            border-color: #d7dbe8
+            color: #c2c9db
+            filter: $shadowbtn

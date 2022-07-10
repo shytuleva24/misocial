@@ -1,0 +1,54 @@
+-
+    let menu = [
+        {name: "Home", url: "#"},
+        {name: "Why MISOCIAL", url: "#"},
+        {name: "Features", url: "#"},
+        {name: "Articles", url: "#"},
+        {name: "Pricing", url: "#"}
+    ]
+-
+    let cards = {
+        free: {
+            src:"../img/puc1",
+            alt:"Misocial free plan",
+            price: "0",
+            description: "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris. Ea commodo consequat.",
+            href: "#"
+        },
+        basic: {
+            src:"../img/puc2",
+            alt:"Misocial basic plan",
+            price: "29",
+            description: "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris. Ea commodo consequat.",
+            href: "#"
+        },
+        vip: {
+            src:"../img/puc3",
+            alt:"Misocial VIP plan",
+            price: "49",
+            description: "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris. Ea commodo consequat.",
+            href: "#"
+        }
+    }
+
+mixin menu (items, myclass)
+    for item in items 
+        li 
+            a(href=item.url) #{item.name}
+    .btn 
+        a(href="#" class=myclass) get started
+
+mixin card (item)
+    figure.price-cup 
+        figcaption
+            picture 
+                source(srcset=item.src + ".webp", tipe="image/webp")
+                img(src=item.src + ".png", alt=item.alt)
+            p.title-card personal
+            p.price 
+                sup $
+                |#{item.price}
+                span /month
+            p.card-descr #{item.description}
+            .btn 
+                a(href=item.href class="violet") select plan

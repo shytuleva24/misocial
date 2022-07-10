@@ -1,0 +1,52 @@
+@import components/mixin.sass
+
+*
+    margin: 0
+
+html
+    font-size: 1px
+    +media(2000)
+        font-size: 1.3px
+    +media(2500)
+        font-size: 1.5px
+
+body 
+    font-family: 'Maven Pro', sans-serif
+    font-size: 16rem
+    color: $mainColor
+a 
+    text-decoration: none
+h3 
+    font-size: 14rem
+    letter-spacing: 1rem
+    line-height: 32rem
+    color: $secondaryColor
+    font-weight: 700
+    text-transform: uppercase
+h1
+    font-size: 60rem
+    letter-spacing: -2rem
+    line-height: 72rem
+    color: $titleColor
+    font-weight: 500
+
+.wrapper
+    width: 95%
+    margin: 0 auto
+
+ul
+    list-style: none
+    padding: 0
+
+.flex
+    display: flex
+
+.white
+    +btn("white")
+
+.violet
+    +btn("violet")
+
+@import components/header
+@import components/main
+@import components/footer
