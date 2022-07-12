@@ -1,6 +1,7 @@
 .first
     background: url(../img/bgcMain.png) no-repeat
     background-size: cover
+    position: relative
 
 .header
     padding-top: 25rem
@@ -83,6 +84,7 @@
     display: flex
     position: absolute
     flex-direction: column
+    height: calc(100vh - 50rem)
     top: 80rem
     left: 0
     background: url(../img/telMenu.png) no-repeat
@@ -100,12 +102,10 @@
             padding: 20px 30px
             color: $mainColor
 .pricing-table
-    padding: 170rem 0 130rem 0
+    padding: 200rem 0 300rem 0
     margin: 0 auto
     width: 80%
     text-align: center
-    +media(1055)
-        padding: 200rem 0 150rem 0
     strong
         position: relative
         font-size: 13rem
@@ -144,11 +144,13 @@
             width: 80%
             font-size: 16rem
 .arrow
-    position: relative
+    position: absolute
     margin: 0 auto
-    padding-bottom: 150rem
     width: 17rem
     cursor: pointer
+    bottom: 50rem
+    left: 50%
+    transform: translate(-50%, -50%)
     img
         position: absolute
         padding: 20rem
