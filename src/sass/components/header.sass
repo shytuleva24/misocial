@@ -78,6 +78,7 @@
                 background-color: $mainColor
                 animation: menuLine 0.5s linear
             &:hover::before
+                +media(1050)
                 display: block
 
 .active-burger
@@ -91,6 +92,7 @@
     background-size: cover
     width: 100%
     z-index: 2
+    overflow-y: scroll
     +media(700)
         top: 115rem
     ul
